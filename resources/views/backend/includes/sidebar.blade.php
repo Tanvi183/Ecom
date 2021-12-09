@@ -26,11 +26,11 @@
             <hr class="sidebar-divider">
 
              <!-- Nav Item - Banner -->
-            {{-- <li class="nav-item {{ (request()->is('admin/banner*')) ? 'nav-item active': '' }}">
+            <li class="nav-item {{ (request()->is('admin/banner*')) ? 'nav-item active': '' }}">
                 <a class="nav-link" href="{{ route('admin.banner.index') }}">
                 <i class="fas fa-images"></i>
                 <span>Banner</span></a>
-            </li> --}}
+            </li>
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">

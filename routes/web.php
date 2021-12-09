@@ -24,3 +24,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 //==================================== Admin Route Here ===================================================//
 Route::get('/admin',[\App\Http\Controllers\Admin\AdminController::class,'admin'])->name('admin');
+
+//==================================== Admin Dashboard Route section ==========================================//
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], function(){
+
+    Route::resource('banner', \App\Http\Controllers\Admin\BannerController::class);
+    Route::post('banner/status', [\App\Http\Controllers\Admin\BannerController::class,'bannerStatus'])->name('banner.status');
+});
